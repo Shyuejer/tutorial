@@ -4,8 +4,20 @@ class QuotesSpider(scrapy.Spider):
     name = "i3"
 
     start_urls = [
-        'https://klse.i3investor.com/servlets/stk/0186.jsp',
-        'https://klse.i3investor.com/servlets/stk/0176.jsp',
+'https://klse.i3investor.com/servlets/stk/5277.jsp',
+'https://klse.i3investor.com/servlets/stk/0185.jsp',
+'https://klse.i3investor.com/servlets/stk/0146.jsp',
+'https://klse.i3investor.com/servlets/stk/5171.jsp',
+'https://klse.i3investor.com/servlets/stk/0176.jsp',
+'https://klse.i3investor.com/servlets/stk/7087.jsp',
+'https://klse.i3investor.com/servlets/stk/0126.jsp',
+'https://klse.i3investor.com/servlets/stk/0113.jsp',
+'https://klse.i3investor.com/servlets/stk/3867.jsp',
+'https://klse.i3investor.com/servlets/stk/0108.jsp',
+'https://klse.i3investor.com/servlets/stk/0186.jsp',
+'https://klse.i3investor.com/servlets/stk/7200.jsp',
+'https://klse.i3investor.com/servlets/stk/5054.jsp'
+
     ]
 
     def parse(self, response):
@@ -14,6 +26,7 @@ class QuotesSpider(scrapy.Spider):
             yield {
                 'name': name,
                 'username': comment.css('span.comuid::text').extract_first(),
-                'datetime': comment.css('span.comdt::text').extract_first(),
+                'date': comment.css('span.comdt::text').extract_first().split(" ")[0],
+                'time': comment.css('span.comdt::text').extract_first().split(" ")[1],
                 'comment': comment.css('span.autolink::text').extract_first(),
             }
