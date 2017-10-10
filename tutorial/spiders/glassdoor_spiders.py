@@ -4,7 +4,6 @@ class QuotesSpider(scrapy.Spider):
     name = "glassdoor"
 
     start_urls = [
-'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234.htm',
 'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659.htm'
     ]
 
