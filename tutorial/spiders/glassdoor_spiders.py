@@ -4,7 +4,12 @@ class QuotesSpider(scrapy.Spider):
     name = "glassdoor"
 
     start_urls = [
-'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659.htm'
+'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P2.htm'
+'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P3.htm'
+'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P4.htm'
+'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P5.htm'
+'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P6.htm'
+'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234.htm'
     ]
 
     def parse(self, response):
