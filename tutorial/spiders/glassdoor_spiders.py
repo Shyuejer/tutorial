@@ -4,7 +4,8 @@ class QuotesSpider(scrapy.Spider):
     name = "glassdoor"
 
     start_urls = [
-'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234.htm'
+'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234.htm',
+'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659.htm'
     ]
 
     def parse(self, response):
@@ -13,8 +14,8 @@ class QuotesSpider(scrapy.Spider):
         for comment in response.css('.hreview'):
             yield {
                 'name': name,
-                'pros': comment.css('div.padTopMd::text').extract_first(),
-                'date': comment.css('span.comdt::text').extract_first().split(" ")[0],
-                'time': comment.css('span.comdt::text').extract_first().split(" ")[1],
-                'comment': comment.css('span.autolink::text').extract_first(),
+                'pros': comment.css('.pros::text').extract_first(),
+                'cons': comment.css('.cons::text').extract_first(),
+                'adviceMgmt': comment.css('.adviceMgmt::text').extract_first(),
+                'time': comment.('.floatLt').xpath('./time/@datetime').extract(),
             }
