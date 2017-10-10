@@ -4,12 +4,16 @@ class QuotesSpider(scrapy.Spider):
     name = "glassdoor"
 
     start_urls = [
-'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P2.htm'
-'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P3.htm'
-'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P4.htm'
-'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P5.htm'
-'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P6.htm'
-'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234.htm'
+'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P2.htm',
+'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P3.htm',
+'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P4.htm',
+'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P5.htm',
+'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P6.htm',
+'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234.htm',
+'https://www.glassdoor.ca/Reviews/Bank-Negara-Reviews-E42236.htm',
+'https://www.glassdoor.ca/Reviews/Bank-Negara-Reviews-E42236_P2.htm',
+'https://www.glassdoor.ca/Reviews/Bank-Negara-Reviews-E42236_P3.htm',
+'https://www.glassdoor.ca/Reviews/Bank-Negara-Reviews-E42236_P4.htm',
     ]
 
     def parse(self, response):
