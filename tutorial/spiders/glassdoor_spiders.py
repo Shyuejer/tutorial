@@ -16,5 +16,5 @@ class QuotesSpider(scrapy.Spider):
                 'pros': comment.css('.pros::text').extract_first(),
                 'cons': comment.css('.cons::text').extract_first(),
                 'adviceMgmt': comment.css('.adviceMgmt::text').extract_first(),
-                'time': comment.('.floatLt').xpath('./time/@datetime').extract(),
+                'time': comment.css('.floatLt').xpath('./time/@datetime').extract_first(),
             }
