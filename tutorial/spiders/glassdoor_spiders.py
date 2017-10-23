@@ -4,16 +4,16 @@ class QuotesSpider(scrapy.Spider):
     name = "glassdoor"
 
     start_urls = [
-'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P2.htm',
-'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P3.htm',
-'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P4.htm',
-'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P5.htm',
-'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234_P6.htm',
-'https://www.glassdoor.ca/Reviews/Business-Development-Bank-of-Canada-Reviews-E221234.htm',
-'https://www.glassdoor.ca/Reviews/Bank-Negara-Reviews-E42236.htm',
-'https://www.glassdoor.ca/Reviews/Bank-Negara-Reviews-E42236_P2.htm',
-'https://www.glassdoor.ca/Reviews/Bank-Negara-Reviews-E42236_P3.htm',
-'https://www.glassdoor.ca/Reviews/Bank-Negara-Reviews-E42236_P4.htm',
+'https://www.glassdoor.com/Reviews/Bank-Simpanan-Nasional-Reviews-E1252990.htm',
+'https://www.glassdoor.com/Reviews/EXIM-Bank-of-Malaysia-Reviews-E692956.htm',
+'https://www.glassdoor.com/Reviews/Bank-Pembangunan-Reviews-E42238.htm',
+'https://www.glassdoor.com/Reviews/Agrobank-Reviews-E965869.htm',
+'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659.htm',
+'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659_P2.htm',
+'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659_P3.htm',
+'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659_P4.htm',
+'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659_P5.htm',
+'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659_P6.htm',
     ]
 
     def parse(self, response):
@@ -21,9 +21,9 @@ class QuotesSpider(scrapy.Spider):
         name = " ".join(name_split)
         for comment in response.css('.hreview'):
             yield {
-                'name': name,
-                'pros': comment.css('.pros::text').extract_first(),
-                'cons': comment.css('.cons::text').extract_first(),
-                'adviceMgmt': comment.css('.adviceMgmt::text').extract_first(),
-                'time': comment.css('.floatLt').xpath('./time/@datetime').extract_first(),
+                'Inst.': name,
+                'Pros': comment.css('.pros::text').extract_first(),
+                'Cons': comment.css('.cons::text').extract_first(),
+                'Advice to Mgmt': comment.css('.adviceMgmt::text').extract_first(),
+                'Time': comment.css('.floatLt').xpath('./time/@datetime').extract_first(),
             }
