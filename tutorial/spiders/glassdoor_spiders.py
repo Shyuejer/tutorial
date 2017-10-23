@@ -13,7 +13,6 @@ class QuotesSpider(scrapy.Spider):
 'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659_P3.htm',
 'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659_P4.htm',
 'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659_P5.htm',
-'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659_P6.htm',
     ]
 
     def parse(self, response):
