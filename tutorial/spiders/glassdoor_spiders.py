@@ -8,11 +8,7 @@ class QuotesSpider(scrapy.Spider):
 'https://www.glassdoor.com/Reviews/EXIM-Bank-of-Malaysia-Reviews-E692956.htm',
 'https://www.glassdoor.com/Reviews/Bank-Pembangunan-Reviews-E42238.htm',
 'https://www.glassdoor.com/Reviews/Agrobank-Reviews-E965869.htm',
-'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659.htm',
-'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659_P2.htm',
-'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659_P3.htm',
-'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659_P4.htm',
-'https://www.glassdoor.com/Reviews/KfW-Reviews-E10659_P5.htm',
+'https://www.glassdoor.ca/Reviews/Small-Medium-Enterprise-Development-Bank-Reviews-E798175.htm'
     ]
 
     def parse(self, response):
