@@ -16,8 +16,8 @@ class QuotesSpider(scrapy.Spider):
 'https://klse.i3investor.com/servlets/stk/0108.jsp',
 'https://klse.i3investor.com/servlets/stk/0186.jsp',
 'https://klse.i3investor.com/servlets/stk/7200.jsp',
-'https://klse.i3investor.com/servlets/stk/5054.jsp'
-
+'https://klse.i3investor.com/servlets/stk/0106.jsp',
+'https://klse.i3investor.com/servlets/stk/5054.jsp',
     ]
 
     def parse(self, response):
