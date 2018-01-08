@@ -17,7 +17,11 @@ class QuotesSpider(scrapy.Spider):
 'https://klse.i3investor.com/servlets/stk/0186.jsp',
 'https://klse.i3investor.com/servlets/stk/7200.jsp',
 'https://klse.i3investor.com/servlets/stk/0106.jsp',
-'https://klse.i3investor.com/servlets/stk/5054.jsp',
+'https://klse.i3investor.com/servlets/stk/5243.jsp',
+'https://klse.i3investor.com/servlets/stk/0080.jsp',
+'https://klse.i3investor.com/servlets/stk/5218.jsp',
+'https://klse.i3investor.com/servlets/stk/4405.jsp',
+'https://klse.i3investor.com/servlets/stk/5703.jsp',
     ]
 
     def parse(self, response):
