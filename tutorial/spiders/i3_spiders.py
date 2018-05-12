@@ -26,7 +26,6 @@ class QuotesSpider(scrapy.Spider):
 'https://klse.i3investor.com/servlets/stk/5031.jsp',
 'https://klse.i3investor.com/servlets/stk/3336.jsp',
 'https://klse.i3investor.com/servlets/stk/1651.jsp',
-'https://klse.i3investor.com/servlets/stk/5099.jsp',
 'https://klse.i3investor.com/servlets/stk/0138.jsp',
 'https://klse.i3investor.com/servlets/stk/5099.jsp',
 'https://klse.i3investor.com/servlets/stk/1023.jsp',
